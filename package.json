@@ -1,7 +1,7 @@
 {
   "name": "planner",
   "productName": "Planner",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "A narrow task panel that sits on the right side of your screen.",
   "main": "src/main.js",
   "author": "mensperry",
@@ -43,6 +43,10 @@
       "target": "AppImage",
       "category": "Utility",
       "artifactName": "Planner-Linux.${ext}"
-    }
+    },
+    "directories": {
+      "buildResources": "build"
+    },
+    "icon": "build/icon.png"
   }
 }

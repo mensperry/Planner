@@ -2,13 +2,14 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' 'unsafe-inline'" />
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self'" />
   <title>Planner</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
   <header class="top">
     <div class="title-row">
+      <img src="logo.svg" class="logo" alt="" />
       <h1>Planner</h1>
       <span id="today" class="today"></span>
     </div>
@@ -18,10 +19,10 @@
       <button id="toggle-help" class="chip" title="Tips">?</button>
     </div>
     <div id="help" class="help" hidden>
-      <p><b>Enter</b> adds a task. Start with <b>!</b> to mark it important, or <b>&gt;</b> to mark it up next (for example <i>!&gt; call the bank</i>).</p>
-      <p>Click <b>+</b> on a task to add subtasks. Double-click any text to edit it.</p>
-      <p>Click a section's colour dot to change its colour. Double-click a section name to rename it.</p>
-      <p>Press <b>Ctrl+N</b> (or <b>Cmd+N</b> on Mac) to jump to the first “add a task” box.</p>
+      <p><b>Enter</b> adds a task. Start with <b>!</b> to mark it important, or <b>&gt;</b> to mark it up next (for example <i>! pay rent</i>).</p>
+      <p>Hover a task and click <b>⋯</b> to add subtasks, flag it, move it to another section, or delete it. You can also <b>drag</b> a task onto another section.</p>
+      <p>Double-click any text to edit it. Click a section's icon to change its icon and colour.</p>
+      <p><b>Ctrl+N</b> (or <b>Cmd+N</b> on Mac) jumps to the first “add a task” box.</p>
     </div>
   </header>
 
@@ -31,6 +32,8 @@
   <footer class="add-section">
     <input id="new-section" type="text" placeholder="+ Add a section (e.g. Work, Personal)" />
   </footer>
+
+  <div id="menu" class="menu" hidden></div>
 
   <script src="app.js"></script>
 </body>

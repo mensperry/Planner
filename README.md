@@ -8,8 +8,9 @@ A simple to-do list that sits in a narrow panel on the right side of your screen
 - **Subtasks** under any task.
 - Mark anything as **Important (!)** or **Up next (▶)**. Up-next items also show in a yellow box at the top, so you always see what to do next.
 - **Tick it off** when it's done.
-- Bright, high-contrast colours. Click a section's rainbow dot to change its colour.
-- Everything is saved automatically on your computer. Nothing is sent anywhere.
+- **Move tasks between sections**, e.g. from This week to Today.
+- A clean, bright, light look. Give each section its own **icon and colour**.
+- Everything is saved to your computer the moment you change it, so closing the app never loses anything. Nothing is sent anywhere.
 
 ---
 
@@ -38,15 +39,18 @@ A simple to-do list that sits in a narrow panel on the right side of your screen
 | Add a task | Type in a section's box and press **Enter** |
 | Add an important task | Start with `!`, e.g. `! pay rent` |
 | Add an up-next task | Start with `>`, e.g. `> finish report` |
-| Add a subtask | Hover a task and click **+** |
+| Add a subtask | Hover a task, click **⋯**, then **Add a subtask** |
+| Flag, move or delete a task | Hover it and click **⋯** |
+| Move a task to another section | **⋯** → **Move to**, or just drag it onto the other section |
 | Edit text | Double-click it |
 | Mark done | Click the square box |
 | New section | Type a name in the dashed box at the bottom and press **Enter** |
 | Rename a section | Double-click its name |
+| Change a section's icon or colour | Click the icon next to its name |
 | Jump to typing | **Ctrl+N** (Windows/Linux) or **Cmd+N** (Mac) |
 | Keep the panel above other windows | Click **Pin on top** |
 
-Tasks are sorted for you: **up next** first, then **important**, then everything else,
+New tasks go to the bottom of a section. Tasks are sorted for you: **up next** first, then **important**, then everything else,
 and finished tasks drop to the bottom.
 
 ## Where are my tasks saved?

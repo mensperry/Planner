@@ -34,7 +34,8 @@ function createWindow() {
     y: workArea.y,
     minWidth: 280,
     title: 'Planner',
-    backgroundColor: '#11121c',
+    backgroundColor: '#f4f6fb',
+    icon: path.join(__dirname, 'icon.png'),
     autoHideMenuBar: true,
     webPreferences: {
       preload: path.join(__dirname, 'preload.js'),
@@ -47,7 +48,16 @@ function createWindow() {
 }
 
 ipcMain.handle('load', () => loadData());
-ipcMain.handle('save', (_e, data) => saveData(data));
+// Saves happen instantly on every change, so closing the app never loses anything.
+ipcMain.on('save', (e, data) => {
+  try {
+    saveData(data);
+    e.returnValue = true;
+  } catch (err) {
+    console.error('Could not save tasks:', err);
+    e.returnValue = false;
+  }
+});
 ipcMain.handle('set-on-top', (_e, onTop) => {
   if (win) win.setAlwaysOnTop(!!onTop);
 });
