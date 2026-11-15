@@ -1,0 +1,48 @@
+{
+  "name": "planner",
+  "productName": "Planner",
+  "version": "1.0.0",
+  "description": "A narrow task panel that sits on the right side of your screen.",
+  "main": "src/main.js",
+  "author": "mensperry",
+  "license": "MIT",
+  "scripts": {
+    "start": "electron .",
+    "dist": "electron-builder"
+  },
+  "devDependencies": {
+    "electron": "^45.3.2",
+    "electron-builder": "^26.0.0"
+  },
+  "build": {
+    "appId": "com.mensperry.planner",
+    "productName": "Planner",
+    "files": [
+      "src/**/*",
+      "package.json"
+    ],
+    "win": {
+      "target": "nsis",
+      "artifactName": "Planner-Setup-Windows.${ext}"
+    },
+    "nsis": {
+      "oneClick": true,
+      "createDesktopShortcut": true
+    },
+    "mac": {
+      "target": {
+        "target": "dmg",
+        "arch": [
+          "universal"
+        ]
+      },
+      "category": "public.app-category.productivity",
+      "artifactName": "Planner-Mac.${ext}"
+    },
+    "linux": {
+      "target": "AppImage",
+      "category": "Utility",
+      "artifactName": "Planner-Linux.${ext}"
+    }
+  }
+}
